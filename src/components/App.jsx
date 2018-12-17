@@ -28,8 +28,17 @@ class App extends Component {
     return (
       <div className="ui container">
         <SearchBar onFormSubmit={this.onTermSubmit} />
-        <VideoDetail video={selectedVideo} />
-        <VideoList videos={videos} onVideoSelect={this.onVideoSelect} />
+        <div className="ui grid">
+          {/* this will force any children to be rendered on the same line */}
+          <div className="ui row">
+            <div className="eleven wide column">
+              <VideoDetail video={selectedVideo} />
+            </div>
+            <div className="five wide column">
+              <VideoList videos={videos} onVideoSelect={this.onVideoSelect} />
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
