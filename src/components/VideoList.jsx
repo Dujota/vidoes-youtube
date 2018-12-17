@@ -9,7 +9,7 @@ const VideoList = ({ videos }) => {
   });
 
   // Then we render to the page by passing the variable result to the return statement
-  return <div>{renderedList}</div>;
+  return <div className="ui relaxed divided list">{renderedList}</div>;
 };
 
 export default VideoList;
